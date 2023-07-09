@@ -6,7 +6,7 @@ export const getProduct = async (req,res)=>{
     try{
        const Items =await productModel.find() 
        res.json(Items);
-       console.log(Items);
+    //    console.log(Items);
     }
     catch(e){
 
