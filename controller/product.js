@@ -50,5 +50,14 @@ export const postProduct = async (req,res)=>{
 
 export const putProduct=()=>{}
 
-export const deleteProduct=()=>{}
 
+
+export  const deleteProduct= async (req,res)=>{
+    console.log(req.params.id);
+    try {
+        await forminsertdata.findByIdAndDelete(req.params.id);
+    } catch (error) {
+        console.log(error); 
+    }
+    
+    }
